@@ -1,24 +1,224 @@
-@import './base.css';
+@import "./base.css";
 
+/* ========== Color Palette ========== */
+:root {
+  --teal: #309898;
+  --orange: #FF9F00;
+  --dark-orange: #F4631E;
+  --red: #CB0404;
+  --dark-gray: #222;
+  --light-gray: #f7f7f7;
+  --white: #ffffff;
+}
+
+/* ========== Global Styles ========== */
 #app {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark-gray);
+  background-color: var(--white);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--teal);
+  font-weight: 700;
+  margin-top: 0;
+}
+
+a {
+  color: var(--teal);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--orange);
+}
+
+button {
+  background-color: var(--dark-orange);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button :hover {
+  background-color: #d45310;
+
+}
+
+
+
+
+
+
+/* ========== Features Section ========== */
+.features {
+  padding: 4rem 2rem;
+  background-color: var(--light-gray);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.feature-icon {
+  color: var(--teal);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.feature:hover .feature-icon {
+  color: var(--orange);
+}
+
+/* ========== Unit Cards ========== */
+/* .units {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.unit-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background-color: var(--white);
+  transition: transform 0.3s ease;
+}
+
+.unit-card:hover {
+  transform: translateY(-5px);
+}
+
+.unit-header {
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.unit-price {
+  color: var(--orange);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem;
+}
+
+.unit-btn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--dark-orange);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.unit-btn:hover {
+  background-color: #d45310;
+} */
+
+/* ========== Gallery ========== */
+.gallery img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== Testimonials ========== */
+.testimonials {
+  padding: 4rem 2rem;
+  background-color: var(--light-gray);
+  text-align: center;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  position: relative;
+  padding: 1rem;
+}
+
+.testimonials blockquote::before {
+  content: "❝";
+  color: var(--teal);
+  font-size: 2rem;
+  position: absolute;
+  left: -1rem;
+  top: -1rem;
+}
+
+.testimonials cite {
+  color: var(--orange);
+  font-weight: bold;
+}
+
+/* ========== Contact & Footer ========== */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--teal);
+  border-radius: 8px;
+}
+
+.contact-form button {
+  background-color: var(--dark-orange);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--red);
+}
+
+
+/* #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  background-color: #fff6f4;
+} */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark-gray);
+  background-color: var(--white);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-a,
-.green {
+
+
+a {
   text-decoration: none;
   color: white;
   padding: 3px;
 }
-
+/* 
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
   }
-}
+} */
 
 @media (min-width: 1024px) {
   body {
@@ -28,7 +228,7 @@ a,
 
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 0 2rem;
   }
 }

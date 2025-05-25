@@ -8,9 +8,19 @@
 
 <style scoped>
 footer {
-  background: #333;
-  color: white;
+  background-color: #267373;
+  color: var(--white);
+  padding: 2rem;
   text-align: center;
-  padding: 1rem;
+}
+
+footer a {
+  color: var(--white);
+  margin: 0 1rem;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--orange);
 }
 </style>
