@@ -3,7 +3,7 @@
     <img :src="apartment.image" :alt="apartment.title" />
     <h3>{{ apartment.title }}</h3>
     <p>{{ apartment.address }}</p>
-    <p>Prezzo: {{ price }} €/settimana</p>
+    <p>Prezzo: {{ apartment.price }} € a settimana</p>
     <router-link :to="'/apartment/' + apartment.id">
       <button class="unit-btn">Dettagli</button>
     </router-link>
@@ -26,6 +26,7 @@ defineProps(["apartment", "price"]);
   background-color: var(--white);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
+
 .apartment-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-4px);

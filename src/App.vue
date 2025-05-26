@@ -21,7 +21,10 @@ import Footer from './components/Footer.vue'
   flex-direction: column;
 }
 main {
-  flex: 1;
+ flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
 }
 </style>
